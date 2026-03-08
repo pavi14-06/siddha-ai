@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Siddha AI — Ancient Wisdom, Modern Intelligence</title>
+<link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Noto+Sans+Tamil:wght@300;400;600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --gold: #C8922A;
+    --gold-light: #E8B94F;
+    --deep: #1A0A00;
+    --saffron: #E85D04;
+    --cream: #FAF3E0;
+    --terracotta: #8B3A1A;
+    --green: #2D6A4F;
+    --text: #2C1810;
+    --muted: #8B7355;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--cream);
+    color: var(--text);
+    font-family: 'Crimson Pro', serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--deep);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 2rem;
+  }
+
+  .kolam-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 20% 50%, rgba(200,146,42,0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(232,93,4,0.06) 0%, transparent 40%),
+      radial-gradient(circle at 60% 80%, rgba(200,146,42,0.05) 0%, transparent 40%);
+  }
+
+  .kolam-pattern {
+    position: absolute;
+    inset: 0;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Ccircle cx='40' cy='40' r='30' stroke='%23C8922A' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='20' stroke='%23C8922A' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='10' stroke='%23C8922A' stroke-width='1'/%3E%3Cline x1='10' y1='40' x2='70' y2='40' stroke='%23C8922A' stroke-width='0.5'/%3E%3Cline x1='40' y1='10' x2='40' y2='70' stroke='%23C8922A' stroke-width='0.5'/%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .hero-content { position: relative; z-index: 2; text-align: center; max-width: 800px; }
+
+  .om-symbol {
+    font-size: 3rem;
+    color: var(--gold);
+    animation: pulse 3s ease-in-out infinite;
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 0.7; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+  }
+
+  .hero h1 {
+    font-family: 'Yatra One', cursive;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    color: var(--gold);
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+  }
+
+  .hero-tamil {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 1.4rem;
+    color: var(--gold-light);
+    opacity: 0.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-sub {
+    font-size: 1.2rem;
+    color: rgba(250,243,224,0.7);
+    font-style: italic;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+  }
+
+  .badge-row {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+  }
+
+  .badge {
+    background: rgba(200,146,42,0.15);
+    border: 1px solid rgba(200,146,42,0.4);
+    color: var(--gold-light);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-family: 'Noto Sans Tamil', sans-serif;
+  }
+
+  .cta-btn {
+    background: linear-gradient(135deg, var(--gold), var(--saffron));
+    color: var(--deep);
+    border: none;
+    padding: 1rem 2.5rem;
+    font-family: 'Yatra One', cursive;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 20px rgba(200,146,42,0.4);
+  }
+
+  .cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(200,146,42,0.6);
+  }
+
+
+
+  /* DIAGNOSIS DEMO */
+  .demo-section {
+    background: var(--deep);
+    padding: 5rem 2rem;
+  }
+
+  .demo-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .demo-title {
+    font-family: 'Yatra One', cursive;
+    font-size: 2.2rem;
+    color: var(--gold);
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .demo-sub {
+    text-align: center;
+    color: rgba(250,243,224,0.5);
+    font-style: italic;
+    margin-bottom: 3rem;
+  }
+
+  .demo-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(200,146,42,0.25);
+    border-radius: 12px;
+    padding: 2.5rem;
+  }
+
+  .symptom-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .symptom-chip {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(200,146,42,0.2);
+    color: rgba(250,243,224,0.75);
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-family: 'Crimson Pro', serif;
+    transition: all 0.2s;
+    text-align: center;
+  }
+
+  .symptom-chip:hover, .symptom-chip.selected {
+    background: rgba(200,146,42,0.25);
+    border-color: var(--gold);
+    color: var(--gold-light);
+  }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem; }
+
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+
+  .form-group label {
+    color: rgba(250,243,224,0.6);
+    font-size: 0.85rem;
+    font-style: italic;
+  }
+
+  .form-group select, .form-group input {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(200,146,42,0.25);
+    color: var(--cream);
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    font-family: 'Crimson Pro', serif;
+    font-size: 1rem;
+    outline: none;
+  }
+
+  .form-group select:focus, .form-group input:focus {
+    border-color: var(--gold);
+  }
+
+  .form-group select option { background: #1A0A00; }
+
+  .diagnose-btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--gold), var(--saffron));
+    color: var(--deep);
+    border: none;
+    padding: 1rem;
+    font-family: 'Yatra One', cursive;
+    font-size: 1.3rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+  }
+
+  .diagnose-btn:hover { transform: translateY(-2px); filter: brightness(1.1); }
+  .diagnose-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+  /* RESULT */
+  .result-panel {
+    display: none;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(200,146,42,0.4);
+    border-radius: 10px;
+    padding: 2rem;
+    animation: fadeIn 0.5s ease;
+  }
+
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+  .result-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(200,146,42,0.2);
+  }
+
+  .naadi-badge {
+    background: linear-gradient(135deg, var(--gold), var(--saffron));
+    color: var(--deep);
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .naadi-badge .naadi-name {
+    font-family: 'Yatra One', cursive;
+    font-size: 1.4rem;
+    display: block;
+  }
+
+  .naadi-badge .naadi-tamil {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 1.1rem;
+    display: block;
+  }
+
+  .result-meta { flex: 1; }
+
+  .result-meta h3 {
+    color: var(--gold-light);
+    font-family: 'Crimson Pro', serif;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    font-style: italic;
+  }
+
+  .confidence-bar {
+    background: rgba(255,255,255,0.1);
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.4rem;
+  }
+
+  .confidence-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold), var(--saffron));
+    border-radius: 4px;
+    transition: width 1s ease;
+  }
+
+  .confidence-label { color: var(--gold); font-size: 0.85rem; }
+
+  .result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+  .result-block {
+    background: rgba(255,255,255,0.04);
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    border-left: 3px solid var(--gold);
+  }
+
+  .result-block.green { border-left-color: var(--green); }
+  .result-block.red { border-left-color: var(--saffron); }
+
+  .result-block h4 {
+    color: rgba(250,243,224,0.5);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.6rem;
+  }
+
+  .result-block ul { list-style: none; }
+
+  .result-block ul li {
+    color: var(--cream);
+    font-size: 0.95rem;
+    padding: 0.2rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .result-block ul li:last-child { border: none; }
+
+  .result-block ul li::before { content: "• "; color: var(--gold); }
+  .result-block.green ul li::before { color: var(--green); }
+
+  .alert-box {
+    background: rgba(232,93,4,0.15);
+    border: 1px solid rgba(232,93,4,0.4);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+    color: #FFB347;
+    font-style: italic;
+    font-size: 0.95rem;
+  }
+
+
+
+  /* FOOTER */
+  footer {
+    background: var(--deep);
+    text-align: center;
+    padding: 2rem;
+    color: rgba(250,243,224,0.3);
+    font-style: italic;
+    font-size: 0.9rem;
+  }
+
+  footer span { color: var(--gold); }
+
+  /* SCROLL */
+  html { scroll-behavior: smooth; }
+
+  @media (max-width: 600px) {
+    .form-row { grid-template-columns: 1fr; }
+    .result-grid { grid-template-columns: 1fr; }
+    .result-header { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="kolam-bg"></div>
+  <div class="kolam-pattern"></div>
+  <div class="hero-content">
+    <span class="om-symbol">🪔</span>
+    <h1>Siddha AI</h1>
+    <p class="hero-tamil">சித்த மருத்துவம் — செயற்கை நுண்ணறிவு</p>
+    <p class="hero-sub">
+      The world's first AI diagnostic system built natively on<br/>
+      <em>Siddha medicine</em> — 5000 years of Tamil healing wisdom,<br/>
+      powered by modern machine learning.
+    </p>
+    <div class="badge-row">
+      <span class="badge">🏆 Tamil Nadu Innovation</span>
+      <span class="badge">🤖 AI + Siddha Native</span>
+      <span class="badge">🌍 World First</span>
+      <span class="badge">⚕️ Envagai Thervu Engine</span>
+    </div>
+    <button class="cta-btn" onclick="document.getElementById('demo').scrollIntoView()">
+      Try Live Diagnosis →
+    </button>
+  </div>
+</section>
+
+
+
+<!-- LIVE DEMO -->
+<section class="demo-section" id="demo">
+  <div class="demo-container">
+    <h2 class="demo-title">Live Diagnosis Demo</h2>
+    <p class="demo-sub">Select your symptoms below — powered by Siddha Envagai Thervu logic</p>
+
+    <div class="demo-card">
+      <p style="color:rgba(250,243,224,0.5); font-size:0.85rem; margin-bottom:1rem; font-style:italic;">
+        ← Select all symptoms that apply →
+      </p>
+      <div class="symptom-grid" id="symptomGrid">
+        <!-- chips injected by JS -->
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Tongue Color / நா நிறம்</label>
+          <select id="tongueSelect">
+            <option value="">— Select —</option>
+            <option value="pale dry cracked">Pale / Dry / Cracked (வாதம்)</option>
+            <option value="red yellow coated inflamed">Red / Yellow Coated (பித்தம்)</option>
+            <option value="white coated thick coating swollen">White Coated / Swollen (கபம்)</option>
+            <option value="normal">Normal</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Eye Sign / விழி அறிகுறி</label>
+          <select id="eyeSelect">
+            <option value="">— Select —</option>
+            <option value="dry eyes twitching">Dry / Twitching (வாதம்)</option>
+            <option value="red eyes yellow tinge">Red / Yellow Tinge (பித்தம்)</option>
+            <option value="watery eyes puffiness">Watery / Puffy (கபம்)</option>
+            <option value="normal">Normal</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="diagnose-btn" id="diagnoseBtn" onclick="runDiagnosis()">
+        🔬 Analyze Naadi — நாடி பரிசோதனை
+      </button>
+
+      <!-- RESULT -->
+      <div class="result-panel" id="resultPanel">
+        <div class="result-header">
+          <div class="naadi-badge">
+            <span class="naadi-name" id="rNaadi">—</span>
+            <span class="naadi-tamil" id="rTamil">—</span>
+          </div>
+          <div class="result-meta">
+            <h3 id="rExplanation">—</h3>
+            <div class="confidence-bar">
+              <div class="confidence-fill" id="rConfidenceBar" style="width:0%"></div>
+            </div>
+            <span class="confidence-label" id="rConfidenceLabel">0% confidence</span>
+          </div>
+        </div>
+        <div class="result-grid">
+          <div class="result-block">
+            <h4>⚕️ Likely Conditions</h4>
+            <ul id="rDiseases"></ul>
+          </div>
+          <div class="result-block">
+            <h4>🌿 Siddha Medicines</h4>
+            <ul id="rMedicines"></ul>
+          </div>
+          <div class="result-block green">
+            <h4>🥗 Diet Advice</h4>
+            <ul id="rDiet"></ul>
+          </div>
+          <div class="result-block green">
+            <h4>🧘 Lifestyle</h4>
+            <ul id="rLifestyle"></ul>
+          </div>
+        </div>
+        <div class="alert-box" id="rAlert" style="display:none">
+          ⚠️ Severity appears high. Please consult a certified Siddha physician. This is AI decision support only.
+        </div>
+        <p style="color:rgba(250,243,224,0.3);font-size:0.8rem;margin-top:1rem;font-style:italic;text-align:center;">
+          Disclaimer: This tool provides decision support only. Always consult a licensed Siddha doctor.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Siddha AI · <span>சித்த மருத்துவம் × செயற்கை நுண்ணறிவு</span> · 5000 years of wisdom, modernized</p>
+  <p style="margin-top:0.5rem">Built by <span>Pavithra V</span> · Chennai, India</p>
+</footer>
+
+<script>
+const ALL_SYMPTOMS = [
+  "Joint Pain", "Dry Skin", "Constipation", "Anxiety", "Insomnia",
+  "Bloating", "Muscle Cramps", "Cold Hands", "Tremors",
+  "Acidity", "Heartburn", "Fever", "Inflammation", "Excessive Sweating",
+  "Burning Sensation", "Skin Rash", "Anger/Irritability",
+  "Cough", "Cold/Mucus", "Obesity", "Lethargy", "Excess Sleep",
+  "Water Retention", "Slow Digestion", "Heaviness"
+];
+
+const SIDDHA_LOCAL = {
+  vatham: {
+    symptoms: ["joint pain","dry skin","constipation","anxiety","insomnia","bloating","muscle cramps","cold hands","tremors"],
+    tongue: ["pale","dry","cracked"],
+    eye: ["dry eyes","twitching"],
+    diseases: ["Vatham Noi", "Vali Noi", "Azhal Vali"],
+    medicines: ["Nilavembu Kudineer","Rasagandhi Mezhugu","Vatham Kudineer"],
+    diet: ["Warm cooked foods","Sesame oil massage","Ginger tea","Avoid raw food"],
+    lifestyle: ["Regular sleep schedule","Oil massage daily","Avoid cold/wind","Gentle Yoga"]
+  },
+  pitham: {
+    symptoms: ["acidity","heartburn","fever","inflammation","excessive sweating","burning sensation","skin rash","anger/irritability"],
+    tongue: ["red","yellow coated","inflamed"],
+    eye: ["red eyes","yellow tinge"],
+    diseases: ["Pitham Noi", "Azhal Noi", "Veppam"],
+    medicines: ["Nannari Syrup","Thaleesapathri Churnam","Chandanam Thailam"],
+    diet: ["Coconut water","Pomegranate","Coriander water","Avoid spicy food"],
+    lifestyle: ["Avoid afternoon sun","Cool water baths","Daily meditation","Sleep before 10pm"]
+  },
+  kapham: {
+    symptoms: ["cough","cold/mucus","obesity","lethargy","excess sleep","water retention","slow digestion","heaviness"],
+    tongue: ["white coated","thick coating","swollen"],
+    eye: ["watery eyes","puffiness"],
+    diseases: ["Kapham Noi", "Sembal", "Iya Noi"],
+    medicines: ["Thippili Rasayanam","Sitopaladi Churnam","Trikadugu Churnam"],
+    diet: ["Light meals","Honey with warm water","Ginger + turmeric","Avoid dairy + sweets"],
+    lifestyle: ["Morning exercise","Dry massage (Udvartana)","Intermittent fasting","Stay active all day"]
+  }
+};
+
+const TAMIL = { vatham: "வாதம்", pitham: "பித்தம்", kapham: "கபம்" };
+
+let selected = new Set();
+
+// Build symptom chips
+const grid = document.getElementById("symptomGrid");
+ALL_SYMPTOMS.forEach(s => {
+  const chip = document.createElement("div");
+  chip.className = "symptom-chip";
+  chip.textContent = s;
+  chip.onclick = () => {
+    const key = s.toLowerCase();
+    if (selected.has(key)) { selected.delete(key); chip.classList.remove("selected"); }
+    else { selected.add(key); chip.classList.add("selected"); }
+  };
+  grid.appendChild(chip);
+});
+
+function runDiagnosis() {
+  if (selected.size === 0) { alert("Please select at least one symptom!"); return; }
+
+  const tongue = document.getElementById("tongueSelect").value.toLowerCase();
+  const eye = document.getElementById("eyeSelect").value.toLowerCase();
+
+  const scores = { vatham: 0, pitham: 0, kapham: 0 };
+
+  for (const dosha in SIDDHA_LOCAL) {
+    const d = SIDDHA_LOCAL[dosha];
+    selected.forEach(s => {
+      d.symptoms.forEach(ds => { if (ds.includes(s) || s.includes(ds)) scores[dosha] += 2; });
+    });
+    d.tongue.forEach(t => { if (tongue.includes(t)) scores[dosha] += 3; });
+    d.eye.forEach(e => { if (eye.includes(e)) scores[dosha] += 2; });
+  }
+
+  const total = Object.values(scores).reduce((a,b) => a+b, 0) || 1;
+  const dominant = Object.keys(scores).reduce((a,b) => scores[a] > scores[b] ? a : b);
+  const conf = Math.round(scores[dominant] / total * 100);
+  const d = SIDDHA_LOCAL[dominant];
+  const severity = selected.size >= 7 ? "high" : selected.size >= 4 ? "medium" : "low";
+
+  // Populate result
+  document.getElementById("rNaadi").textContent = dominant.charAt(0).toUpperCase() + dominant.slice(1);
+  document.getElementById("rTamil").textContent = TAMIL[dominant];
+  document.getElementById("rExplanation").textContent =
+    `${selected.size} symptoms analyzed → ${dominant.charAt(0).toUpperCase()+dominant.slice(1)} dominant Naadi`;
+
+  setTimeout(() => {
+    document.getElementById("rConfidenceBar").style.width = conf + "%";
+  }, 100);
+  document.getElementById("rConfidenceLabel").textContent = conf + "% confidence";
+
+  const fill = (id, arr) => {
+    const el = document.getElementById(id);
+    el.innerHTML = arr.map(x => `<li>${x}</li>`).join("");
+  };
+
+  fill("rDiseases", d.diseases);
+  fill("rMedicines", d.medicines);
+  fill("rDiet", d.diet);
+  fill("rLifestyle", d.lifestyle);
+
+  document.getElementById("rAlert").style.display = severity === "high" ? "block" : "none";
+  document.getElementById("resultPanel").style.display = "block";
+  document.getElementById("resultPanel").scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+</script>
+</body>
+</html>

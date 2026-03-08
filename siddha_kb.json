@@ -1,0 +1,147 @@
+{
+  "version": "1.0",
+  "system": "Siddha AI Knowledge Base",
+  "based_on": ["Theraiyar Vagadam", "Agasthiyar 2000", "Yugi Vaidhya Chinthamani"],
+
+  "naadi_types": {
+    "vatham": {
+      "tamil": "வாதம்",
+      "element": "Air + Space",
+      "qualities": ["dry", "light", "cold", "irregular", "mobile"],
+      "body_sites": ["colon", "bones", "skin", "ears", "nervous system"],
+      "symptoms": [
+        "joint pain", "dry skin", "constipation", "anxiety", "insomnia",
+        "bloating", "muscle cramps", "cold hands", "irregular digestion", "tremors",
+        "back pain", "tinnitus", "forgetfulness", "fear", "gas"
+      ],
+      "tongue_signs": ["pale", "dry", "cracked", "thin"],
+      "eye_signs": ["dry eyes", "twitching", "blurred vision", "darting movement"],
+      "pulse": "thin, irregular, snake-like movement",
+      "urine": "pale yellow, frothy",
+      "stool": "dry, hard, dark",
+      "diseases": [
+        {"name": "Vatham Noi", "tamil": "வாத நோய்", "description": "General Vata disorder"},
+        {"name": "Vali Noi", "tamil": "வலி நோய்", "description": "Pain disorders"},
+        {"name": "Azhal Vali", "tamil": "அழல் வலி", "description": "Burning joint pain"},
+        {"name": "Thiraivali", "tamil": "திரை வலி", "description": "Muscle spasms"}
+      ],
+      "medicines": [
+        {"name": "Nilavembu Kudineer", "tamil": "நிலவேம்பு குடிநீர்", "use": "Fever, joint pain, viral"},
+        {"name": "Rasagandhi Mezhugu", "tamil": "இரசகந்தி மெழுகு", "use": "Neurological, tremors"},
+        {"name": "Vatham Kudineer", "tamil": "வாத குடிநீர்", "use": "General Vata imbalance"},
+        {"name": "Vata Chinthamani Ras", "tamil": "வாத சிந்தாமணி", "use": "Paralysis, weakness"}
+      ],
+      "diet": {
+        "eat": ["Warm cooked foods", "Sesame oil", "Ginger", "Garlic", "Sweet/sour/salty tastes",
+                "Warm milk", "Ghee", "Root vegetables", "Nuts"],
+        "avoid": ["Raw cold foods", "Fasting", "Bitter/astringent excess", "Cold drinks", "Dry foods"]
+      },
+      "lifestyle": [
+        "Maintain regular daily schedule",
+        "Warm sesame oil massage (Abhyanga) daily",
+        "Avoid cold, wind, and excessive travel",
+        "Gentle yoga and stretching",
+        "Warm baths",
+        "Adequate sleep — same time every day"
+      ]
+    },
+
+    "pitham": {
+      "tamil": "பித்தம்",
+      "element": "Fire + Water",
+      "qualities": ["hot", "sharp", "light", "oily", "spreading"],
+      "body_sites": ["liver", "blood", "eyes", "skin", "sweat glands"],
+      "symptoms": [
+        "acidity", "heartburn", "fever", "inflammation", "anger",
+        "excessive sweating", "loose stools", "burning sensation", "redness", "skin rash",
+        "migraines", "yellow eyes", "bleeding tendency", "excessive hunger", "perfectionism"
+      ],
+      "tongue_signs": ["red", "yellow coated", "inflamed", "pointed"],
+      "eye_signs": ["red eyes", "yellow tinge", "sharp gaze", "sensitive to light"],
+      "pulse": "jumping, like a frog",
+      "urine": "dark yellow, strong smell",
+      "stool": "loose, yellowish, foul smell",
+      "diseases": [
+        {"name": "Pitham Noi", "tamil": "பித்த நோய்", "description": "General Pitta disorder"},
+        {"name": "Azhal Noi", "tamil": "அழல் நோய்", "description": "Heat/fire disorders"},
+        {"name": "Veppam", "tamil": "வெப்பம்", "description": "Fever conditions"},
+        {"name": "Thaaha Noi", "tamil": "தாக நோய்", "description": "Excessive thirst disorder"}
+      ],
+      "medicines": [
+        {"name": "Nannari Syrup", "tamil": "நன்னாரி சர்பத்", "use": "Cooling, UTI, heat"},
+        {"name": "Thaleesapathri Churnam", "tamil": "தாளீசபத்திரி சூரணம்", "use": "Digestive fire"},
+        {"name": "Chandanam Thailam", "tamil": "சந்தன தைலம்", "use": "Skin cooling, fever"},
+        {"name": "Pitha Chinthamani", "tamil": "பித்த சிந்தாமணி", "use": "Liver disorders"}
+      ],
+      "diet": {
+        "eat": ["Coconut water", "Pomegranate", "Coriander water", "Cucumber", "Sweet/bitter/astringent",
+                "Cow's milk", "Ghee", "Leafy greens", "Melons"],
+        "avoid": ["Spicy food", "Fermented food", "Alcohol", "Red meat", "Excessive salt", "Sour foods"]
+      },
+      "lifestyle": [
+        "Avoid direct afternoon sun",
+        "Cool water baths morning and evening",
+        "Daily meditation and pranayama",
+        "Sleep before 10 PM",
+        "Moonlight walks",
+        "Avoid conflict and competitive environments"
+      ]
+    },
+
+    "kapham": {
+      "tamil": "கபம்",
+      "element": "Earth + Water",
+      "qualities": ["heavy", "slow", "cold", "oily", "stable", "dense"],
+      "body_sites": ["lungs", "stomach", "joints", "lymph", "sinuses"],
+      "symptoms": [
+        "cough", "cold", "obesity", "lethargy", "excess sleep",
+        "mucus", "water retention", "slow digestion", "depression", "heaviness",
+        "possessiveness", "attachment", "nasal congestion", "sweet cravings", "low energy"
+      ],
+      "tongue_signs": ["white coated", "thick coating", "swollen", "wet"],
+      "eye_signs": ["watery eyes", "puffiness", "heavy eyelids", "pale conjunctiva"],
+      "pulse": "slow, steady, like a swan",
+      "urine": "pale, large quantity",
+      "stool": "pale, mucousy, heavy",
+      "diseases": [
+        {"name": "Kapham Noi", "tamil": "கப நோய்", "description": "General Kapha disorder"},
+        {"name": "Sembal", "tamil": "செம்பல்", "description": "Respiratory/mucus conditions"},
+        {"name": "Iya Noi", "tamil": "இய நோய்", "description": "Sluggishness disorders"},
+        {"name": "Thimira Noi", "tamil": "திமிர நோய்", "description": "Obesity related"}
+      ],
+      "medicines": [
+        {"name": "Thippili Rasayanam", "tamil": "திப்பிலி இரசாயனம்", "use": "Respiratory, obesity"},
+        {"name": "Sitopaladi Churnam", "tamil": "சீதோபலாதி சூரணம்", "use": "Cough, bronchitis"},
+        {"name": "Trikadugu Churnam", "tamil": "திரிகடுகு சூரணம்", "use": "Digestive, metabolism"},
+        {"name": "Kapa Chinthamani", "tamil": "கப சிந்தாமணி", "use": "General Kapha reduction"}
+      ],
+      "diet": {
+        "eat": ["Light warm meals", "Honey (unheated)", "Ginger", "Turmeric", "Bitter/pungent/astringent",
+                "Barley", "Millets", "Legumes", "Spiced foods"],
+        "avoid": ["Heavy dairy", "Sweets", "Fried foods", "Cold foods/drinks", "Wheat excess", "Sleeping after meals"]
+      },
+      "lifestyle": [
+        "Vigorous morning exercise before 10 AM",
+        "Dry massage (Udvartana) with herbal powders",
+        "Occasional fasting or light eating days",
+        "Stay mentally and physically active",
+        "Wake before sunrise",
+        "Avoid daytime sleeping"
+      ]
+    }
+  },
+
+  "envagai_thervu": {
+    "description": "Siddha's 8-fold examination system",
+    "examinations": [
+      {"id": 1, "name": "Naadi", "tamil": "நாடி", "method": "Pulse reading at wrist"},
+      {"id": 2, "name": "Sparism", "tamil": "சீர்மை", "method": "Touch and skin texture"},
+      {"id": 3, "name": "Naa", "tamil": "நா", "method": "Tongue examination"},
+      {"id": 4, "name": "Niram", "tamil": "நிரம்", "method": "Skin and eye color"},
+      {"id": 5, "name": "Mozhi", "tamil": "மொழி", "method": "Voice and speech quality"},
+      {"id": 6, "name": "Vizhi", "tamil": "விழி", "method": "Eye examination"},
+      {"id": 7, "name": "Malam", "tamil": "மலம்", "method": "Stool characteristics"},
+      {"id": 8, "name": "Moothiram", "tamil": "மூத்திரம்", "method": "Urine analysis"}
+    ]
+  }
+}
