@@ -12,15 +12,27 @@
 
 ## 👩‍💻 About This Project
 
-Hi, I'm **Pavithra V** — a CS graduate and Data Analyst from Chennai with hands-on experience in Python, ML, and ERP automation. During my internship at **Data Patterns India Ltd**, I built real-time KPI dashboards and automated data pipelines for aerospace/defense systems using Python and SQL. That experience showed me the power of combining structured knowledge with intelligent automation.
+Hi, I'm **Pavithra V** — a CS graduate and Data Analyst from Chennai with hands-on experience in Python, ML, and ERP automation.I built real-time KPI dashboards and automated data pipelines for aerospace/defense systems using Python and SQL. That experience showed me the power of combining structured knowledge with intelligent automation.
 
 This project, **Siddha AI**, applies that same mindset to something deeply rooted in Tamil culture. I built this to digitize and intelligently automate the diagnostic process of **Siddha medicine** — an ancient Tamil healing system that has never had an AI layer built natively for it. Every existing health AI is either Allopathic or Ayurveda-adapted. Siddha deserved its own system.
 
 I designed and built this entirely myself — backend, frontend, knowledge base, and scoring engine — as a solo project.
 
 ---
+🔬 Research Context & What Makes This Different
+Siddha AI as a concept has been recognized by researchers as an important unsolved problem:
+IEEE (2024) — "An AI-driven platform for Siddha and naturopathy treatment" — proposed as a future concept, no working system built (IEEE Xplore)
+IJAASR — "NLP-based Siddha remedy recommendation system" — proposed architecture, no deployed implementation (IJAASR Paper)
+This project moves beyond proposals. While existing work remains at the research-paper stage, Siddha AI is:
+✅ Fully working and deployed — not a concept, not a proposal
+✅ Open-source — complete codebase on GitHub, runnable today
+✅ Envagai Thervu digitized — Siddha's classical 8-fold diagnostic framework implemented as a programmable scoring engine for the first time
+✅ Tamil-English bilingual — natively, not translated
+✅ Real API with Swagger docs — POST /diagnose returns structured Siddha diagnosis
+The IEEE and IJAASR papers prove this problem space is recognized as important and needed. This project is the working answer to what they proposed.
+---
 
-## 🌍 What Makes This a World First
+## 🌍 What Makes This a First Fully working Project
 
 No AI system has ever been built **natively on Siddha medicine**. This project:
 
@@ -70,6 +82,7 @@ cd frontend
 python -m http.server 3000
 ```
 
+💡 The frontend works fully standalone — the diagnosis logic is also built into the JavaScript, so it works even without the backend running.
 ---
 
 ## 🧠 How I Built the AI Engine
@@ -234,6 +247,15 @@ Point to frontend/ folder → auto-deploy on every push
 | AI Engine | Rule-based weighted scoring (v1), IndicBERT planned (v2) |
 | Knowledge Base | Structured JSON, classical Siddha texts |
 | Deployment | Render (backend), Vercel (frontend) |
+
+---
+
+📚 Academic References
+These papers validate the importance of this problem space — and confirm that no working implementation existed before this project.
+[1] IEEE (2024) — AI-driven platform for Siddha and naturopathy treatment (proposed concept)
+https://ieeexplore.ieee.org/document/10724133
+[2] IJAASR — NLP-based Siddha remedy recommendation system (proposed architecture)
+https://ijaasr.dvpublication.com/uploads/664db7714b692_375.pdf
 
 ---
 
